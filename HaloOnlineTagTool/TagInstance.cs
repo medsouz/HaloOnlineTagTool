@@ -22,6 +22,12 @@ namespace HaloOnlineTagTool
         // Size of a tag header with no dependencies or offsets
         private const uint TagHeaderSize = 0x24;
 
+        public TagInstance()
+        {
+            // If no index is provided then create a null index
+            Index = -1;
+        }
+
         internal TagInstance(int index)
         {
             Index = index;
